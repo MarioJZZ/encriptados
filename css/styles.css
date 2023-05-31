@@ -201,7 +201,7 @@
 }
 
 .footer__linkedIn{
-  color: #d8d1d8;
+  color: #d1d8d7;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -220,6 +220,10 @@
 
   .footer__img {
     width: 10rem;
+    margin-top: 20px;
+  }
+  .footer__linkedIn{
+    margin-bottom: 20px;
   }
 }
 
