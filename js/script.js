@@ -6,14 +6,14 @@ function validateInput(event) {
   }
 }
 
-function validateText(event){
+function validateText(event) {
   let textinput = document.getElementById("text-input").value;
   let check = textinput.match(/^[a-z\s]*$/);
 
-  if(!check || check === 0) {
-      alert("Only lowercase letters and no accents are allowed.")
-      location.reload();
-      return true;
+  if (!check || check === 0) {
+    alert("Only lowercase letters and no accents are allowed.");
+    location.reload();
+    return true;
   }
 }
 
@@ -45,23 +45,10 @@ function copyToClipboard() {
   let resultOutput = document.getElementById("result-output");
   resultOutput.select();
   navigator.clipboard.writeText(resultOutput.value);
-  alert("Texto Copiado")
+  alert("Texto Copiado");
 }
-
 
 function deleteTextArea() {
-   resultOutput = document.getElementById("text-input").value = '';
-   resultOutput = document.getElementById("result-output").value = '';
+  resultOutput = document.getElementById("text-input").value = "";
+  resultOutput = document.getElementById("result-output").value = "";
 }
-
- 
-
-
-
-
-
-
-
-
-
-
