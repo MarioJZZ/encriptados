@@ -23,7 +23,8 @@ function decryptText() {
 function copyToClipboard() {
   let resultOutput = document.getElementById("result-output");
   resultOutput.select();
-  document.execCommand("copy");
+  navigator.clipboard.writeText(resultOutput.value);
+  alert("Texto Copiado")
 }
 
 
@@ -32,15 +33,18 @@ function deleteTextArea() {
    resultOutput = document.getElementById("result-output").value = '';
 }
 
+function validateInput(event) {
+  var inputStr = event.key;
 
- function validateInput(event) {
-   let inputStr = event.key;
+  if (/[^a-z\s]/.test(inputStr)) {
+    // alert("Solo se aceptan letras minúsculas.");
+    event.preventDefault();
+  }
+}
 
-   if (/[^a-z\s]/.test(inputStr)) {
-    alert("Solo se aceptan letras minúsculas.");
-     event.preventDefault();
-   }
- }
+
+ 
+
 
 
 

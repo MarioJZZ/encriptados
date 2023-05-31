@@ -6,17 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="./css/styles-min.css" />
+  <link rel="stylesheet" href="./css/styles-min.css" /> 
   <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+  <script src="https://kit.fontawesome.com/6261897249.js" crossorigin="anonymous"></script>
   <title>CryptoShield</title>
 </head>
 
 <body class="header finisher-header">
 
-  <header class="head__top">
-      <div class="head__div">
-        <img class="head__logo" src="./assets/img/alura-logo.1647533644.svg" alt="logo" />
-        <img class="head__logo" src="./assets/img/oracle-svgrepo-com.svg" alt="logo" />
+  <header class="head__top" >
+      <div class="head__div container">
+        <a href="https://app.aluracursos.com" target="_blank"><img class="head__logo" src="./assets/img/alura-logo.1647533644.svg" alt="Logo de Alura"></a>
+        <a href="https://www.oracle.com/" target="_blank"><img class="head__logo" src="./assets/img/oracle-svgrepo-com.svg" alt="Logo de Oracle"></a>
       </div>
   </header>
 
@@ -26,20 +27,16 @@
     </h1>
   </div>
 
-  <div class="main">
+  <div class="main container">
 
+    <!-- left side -->
     <div class="main__box">
       <div class="main__content">
         <label class="main__label" for="text-input">Text:</label>
         <textarea rows="10" cols="50"
           class="main__textarea"
           id="text-input" placeholder="Write a message here" onkeypress="validateInput(event)"></textarea>
-        <p class="main__info"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
-          </svg>
-          Do not use letters with accents or special characters.</p>
+        <p class="main__info"></p>
       </div>
       <div class="main__buttons">
         <button class="btn btn__main" type="button" onclick="encryptText()">
@@ -67,19 +64,15 @@
         </button>
       </div>
     </div>
-
+    
+    <!-- Right side -->
     <div class="main__box">
       <div class="main__content">
         <label class="main__label" for="text-input">Result:</label>
         <textarea rows="10" cols="50"
           class="main__textarea"
           id="result-output" readonly></textarea>
-        <p class="main__info"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
-          </svg>
-          Do not use letters with accents or special characters.</p>
+        <p class="main__info"></p>
       </div>
 
       <div class="main__buttons">
@@ -99,7 +92,6 @@
           <div id="container-stars">
             <div id="stars"></div>
           </div>
-
           <div id="glow">
             <div class="circle"></div>
             <div class="circle"></div>
@@ -111,8 +103,11 @@
 
 
   <footer class="footer">
-    <img class="footer__img" src="./assets/img/logoNextEducation.png" alt="">
-    <div class="footer__author">© 2023 MarioJZZ. All rights reserved.</div>
+      <a href="https://www.oracle.com/lad/education/oracle-next-education/" target="_blank"><img class="footer__img" src="./assets/img/logoNextEducation.png" alt=""></a>
+      <p class="footer__author">© 2023 MarioJZZ. All rights reserved.</p>
+      <a href="https://www.linkedin.com/in/mario-jim%C3%A9nez-b16a0823b/" target="_blank">
+        <i class="fa-brands fa-linkedin fa-lg footer__linkedIn"></i>
+      </a>
   </footer>
 
 
