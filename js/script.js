@@ -1,12 +1,28 @@
+const textArea = document.getElementById("text-input");
+const mensaje = document.getElementById("text-output");
+
+function validarTexto(){
+  let textoEscrito = document.getElementById("text-input").value;
+  let validador = textoEscrito.match(/^[a-z]*$/);
+
+  if(!validador || validador === 0) {
+      alert("Solo son permitidas letras minúsculas y sin acentos")
+      location.reload();
+      return true;
+  }
+}
+
 function encryptText() {
-  let text = document.getElementById("text-input").value;
-  let encryptedText = text
-    .replace(/e/g, "enter")
-    .replace(/i/g, "imes")
-    .replace(/a/g, "ai")
-    .replace(/o/g, "ober")
-    .replace(/u/g, "ufat");
-  document.getElementById("result-output").value = encryptedText;
+  if (!validarTexto()) {
+    let text = document.getElementById("text-input").value;
+    let encryptedText = text
+      .replace(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober")
+      .replace(/u/g, "ufat");
+    document.getElementById("result-output").value = encryptedText;
+  }
 }
 
 function decryptText() {
