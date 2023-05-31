@@ -45,7 +45,7 @@ function copyToClipboard() {
   let resultOutput = document.getElementById("result-output");
   resultOutput.select();
   navigator.clipboard.writeText(resultOutput.value);
-  alert("Texto Copiado");
+  alert("Copied text");
 }
 
 function deleteTextArea() {
