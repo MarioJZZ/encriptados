@@ -1,19 +1,24 @@
-const textArea = document.getElementById("text-input");
-const mensaje = document.getElementById("text-output");
+function validateInput(event) {
+  let inputStr = event.key;
 
-function validarTexto(){
-  let textoEscrito = document.getElementById("text-input").value;
-  let validador = textoEscrito.match(/^[a-z]*$/);
+  if (/[^a-z\s]/.test(inputStr)) {
+    event.preventDefault();
+  }
+}
 
-  if(!validador || validador === 0) {
-      alert("Solo son permitidas letras minúsculas y sin acentos")
+function validateText(event){
+  let textinput = document.getElementById("text-input").value;
+  let check = textinput.match(/^[a-z\s]*$/);
+
+  if(!check || check === 0) {
+      alert("Only lowercase letters and no accents are allowed.")
       location.reload();
       return true;
   }
 }
 
 function encryptText() {
-  if (!validarTexto()) {
+  if (!validateText()) {
     let text = document.getElementById("text-input").value;
     let encryptedText = text
       .replace(/e/g, "enter")
@@ -48,16 +53,6 @@ function deleteTextArea() {
    resultOutput = document.getElementById("text-input").value = '';
    resultOutput = document.getElementById("result-output").value = '';
 }
-
-function validateInput(event) {
-  var inputStr = event.key;
-
-  if (/[^a-z\s]/.test(inputStr)) {
-    // alert("Solo se aceptan letras minúsculas.");
-    event.preventDefault();
-  }
-}
-
 
  
 
