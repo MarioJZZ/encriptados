@@ -8,7 +8,6 @@
 
 
 .container {
-  /* max-width: 1200px; */
   display: flex;
   justify-content: start;
   padding-left: 10%;
@@ -235,7 +234,7 @@ h1 {
   border-radius: 5px;
   color: white;
   position: relative;
-  width: 600px;
+  width: 500px;
   display: inline-block;
   text-shadow: -1px -1px 0 #1df2f0, 1px 1px 0 #e94be8;
   border: 1px solid #d1d8d7;
